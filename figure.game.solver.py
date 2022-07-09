@@ -4,10 +4,15 @@ board_strings = [ 'PPWPW', 'GGGPG', 'GGWGP', 'PPGPY', 'GPGGG']
 max_moves = 8
 
 def main(board_strings):
+    print('Board:')
+    for row in board_strings:
+        print(row)
     board = init_board(board_strings)
     winning_moves = solve(board, 1)
     if winning_moves:
-        print('Solution: ', winning_moves)
+        print('Solution:')
+        for move in winning_moves:
+            print( move)
     else:
         print('Impossible\n')
 
